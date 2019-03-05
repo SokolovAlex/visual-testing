@@ -9,16 +9,21 @@
     "test": "gemini test test/suites/all.js",
     "components:test": "gemini test test/suites/components.js",
     "components:update": "gemini update test/suites/components.js",
+    "myk:test": "gemini test test/suites/myk.js",
+    "myk:update": "gemini update test/suites/myk.js",
+    "myk:gui": "gemini gui test/suites/myk.js --port 9000 -O",
     "update": "gemini update test/suites/all.js",
     "postinstall": "selenium-standalone install",
     "selenium": "selenium-standalone start",
-    "gui": "gemini gui test/suites/components.js --port 9000"
+    "gui": "gemini gui test/suites/components.js --port 9000 -O",
+    "clear": "rimraf screenshots && rimraf gemini-reports"
   },
   "devDependencies": {
     "gemini": "^7.3.0",
     "html-reporter": "^3.6.3"
   },
   "dependencies": {
+    "rimraf": "^2.6.3",
     "selenium-standalone": "^6.15.6"
   }
 }

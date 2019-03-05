@@ -1,12 +1,12 @@
 module.exports = {
-  rootUrl: 'http://localhost:8000/',
-  //rootUrl: 'https://www.kaspersky.fr/',
+  // rootUrl: 'http://localhost:8000/',
+  // rootUrl: 'https://www.kaspersky.fr/',
+  rootUrl: 'https://my.kaspersky.com/',
   gridUrl: 'http://127.0.0.1:4444/wd/hub',
 
-  windowSize: "1150x768",
+  windowSize: "1150x968",
   screenshotsDir: 'screenshots',
-  // screenshotMode: 'fullpage',
-  //compositeImage: true,
+  compositeImage: true,
 
   browsers: {
     chrome: {
@@ -19,9 +19,9 @@ module.exports = {
   system: {
     parallelLimit: 3,
     plugins: {
+      // issue https://github.com/gemini-testing/html-reporter/issues/27
       "html-reporter/gemini": {
         enabled: true,
-        path: "gemini-reports",
         defaultView: "all",
       }
     },
