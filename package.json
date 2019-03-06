@@ -6,16 +6,14 @@
   "author": "Alexey Sokolov <alexey.sokolov2@kaspersky.com>",
   "license": "MIT",
   "scripts": {
-    "test": "gemini test test/suites/all.js",
-    "components:test": "gemini test test/suites/components.js",
-    "components:update": "gemini update test/suites/components.js",
-    "myk:test": "gemini test test/suites/myk.js",
-    "myk:update": "gemini update test/suites/myk.js",
-    "myk:gui": "gemini gui test/suites/myk.js --port 9000 -O",
-    "update": "gemini update test/suites/all.js",
+    "corp:test": "gemini test test/suites/corp.js",
+    "corp:update": "gemini update test/suites/corp.js",
+    "corp:gui": "gemini gui test/suites/corp.js --port 9000 -O",
+    "myk:test": "gemini test test/suites/myk.js --root-url https://my.kaspersky.com/",
+    "myk:update": "gemini update test/suites/myk.js --root-url https://my.kaspersky.com/",
+    "myk:gui": "gemini gui test/suites/myk.js --port 9001 -O --root-url https://my.kaspersky.com/",
     "postinstall": "selenium-standalone install",
     "selenium": "selenium-standalone start",
-    "gui": "gemini gui test/suites/components.js --port 9000 -O",
     "clear": "rimraf screenshots && rimraf gemini-reports"
   },
   "devDependencies": {
